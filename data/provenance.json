@@ -1,0 +1,10 @@
+{
+  "dataset": "UCI Heart Disease, processed Cleveland subset",
+  "source_url": "https://archive.ics.uci.edu/static/public/45/heart+disease.zip",
+  "landing_page": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+  "doi": "10.24432/C52P4X",
+  "license": "CC BY 4.0",
+  "retrieved_on": "2026-10-10",
+  "raw_sha256": "a74b7efa387bc9d108d7d0115d831fe9b414b29ae7124f331b622b4efa0427c8",
+  "transformations": "Raw source file unchanged. Target binarized only in the loader."
+}

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.streamlit/secrets.toml
+# Keep the small public dataset, trained artifact and reports for the demo.

@@ -1,0 +1,146 @@
+{
+  "model": "logistic_regression",
+  "features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "threshold": 0.5,
+  "seed": 42,
+  "selection": "Highest mean training five-fold ROC-AUC; fixed candidates, no parameter search.",
+  "cv_folds": 5,
+  "cv_comparison": [
+    {
+      "model": "dummy",
+      "roc_auc_mean": 0.5,
+      "roc_auc_std": 0.0,
+      "accuracy_mean": 0.5413265306122448,
+      "accuracy_std": 0.007230391724313341,
+      "precision_mean": 0.2706632653061224,
+      "precision_std": 0.0036151958621566706,
+      "recall_mean": 0.5,
+      "recall_std": 0.0,
+      "f1_mean": 0.3511967757230915,
+      "f1_std": 0.0030466798692811914
+    },
+    {
+      "model": "logistic_regression",
+      "roc_auc_mean": 0.9064947130164521,
+      "roc_auc_std": 0.022026182992005684,
+      "accuracy_mean": 0.8470238095238095,
+      "accuracy_std": 0.024143895426808698,
+      "precision_mean": 0.8550679700401943,
+      "precision_std": 0.03577802809595434,
+      "recall_mean": 0.841897233201581,
+      "recall_std": 0.01940528327329949,
+      "f1_mean": 0.8442797740993939,
+      "f1_std": 0.022212755054018266
+    },
+    {
+      "model": "random_forest",
+      "roc_auc_mean": 0.8981684177336351,
+      "roc_auc_std": 0.031030250582111587,
+      "accuracy_mean": 0.8261904761904763,
+      "accuracy_std": 0.03284751790337317,
+      "precision_mean": 0.8297224559763128,
+      "precision_std": 0.032584576661478876,
+      "recall_mean": 0.8230577795795186,
+      "recall_std": 0.03536091332784641,
+      "f1_mean": 0.8235556360475224,
+      "f1_std": 0.03419044974012489
+    },
+    {
+      "model": "xgboost",
+      "roc_auc_mean": 0.8881180815963425,
+      "roc_auc_std": 0.025763821251383618,
+      "accuracy_mean": 0.8221088435374149,
+      "accuracy_std": 0.032475590833019846,
+      "precision_mean": 0.8285092625116246,
+      "precision_std": 0.03045983183556404,
+      "recall_mean": 0.8185123250340641,
+      "recall_std": 0.0343361940274973,
+      "f1_mean": 0.8188724612166116,
+      "f1_std": 0.03356507359489043
+    }
+  ],
+  "train_rows": 242,
+  "test_rows": 61,
+  "training_ranges": {
+    "age": {
+      "min": 29.0,
+      "max": 77.0
+    },
+    "trestbps": {
+      "min": 94.0,
+      "max": 200.0
+    },
+    "chol": {
+      "min": 126.0,
+      "max": 564.0
+    },
+    "thalach": {
+      "min": 71.0,
+      "max": 202.0
+    },
+    "oldpeak": {
+      "min": 0.0,
+      "max": 6.2
+    },
+    "ca": {
+      "min": 0.0,
+      "max": 3.0
+    }
+  },
+  "test_metrics": {
+    "roc_auc": 0.9577922077922079,
+    "roc_auc_bootstrap_95_interval": [
+      0.8993506493506495,
+      0.9967532467532467
+    ],
+    "average_precision": 0.9407883021856493,
+    "accuracy": 0.8688524590163934,
+    "precision": 0.8125,
+    "recall": 0.9285714285714286,
+    "f1": 0.8666666666666667,
+    "specificity": 0.8181818181818182,
+    "brier_score": 0.08509354827783269,
+    "confusion_matrix": [
+      [
+        27,
+        6
+      ],
+      [
+        2,
+        26
+      ]
+    ],
+    "threshold": 0.5,
+    "test_rows": 61
+  },
+  "raw_sha256": "a74b7efa387bc9d108d7d0115d831fe9b414b29ae7124f331b622b4efa0427c8",
+  "model_sha256": "a3b82d5617602e115fd1cf7f5f6d7862573c6e6d89f643b147186bf2ae3d5312",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "streamlit": "1.66.0",
+    "matplotlib": "3.11.2",
+    "xgboost": "3.4.1"
+  },
+  "python": "3.14.8",
+  "trained_at_utc": "2026-10-29T05:32:32.884990+00:00",
+  "probabilities_calibrated": false,
+  "limitations": "Small historical Cleveland sample; no external validation; educational use only."
+}
